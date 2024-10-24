@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="T:API.UnityConfig">
+            <summary>
+            Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="P:API.UnityConfig.Container">
+            <summary>
+            Configured Unity Container.
+            </summary>
+        </member>
+        <member name="M:API.UnityConfig.RegisterTypes(Unity.IUnityContainer)">
+            <summary>
+            Registers the type mappings with the Unity container.
+            </summary>
+            <param name="container">The unity container to configure.</param>
+            <remarks>
+            There is no need to register concrete types such as controllers or
+            API controllers (unless you want to change the defaults), as Unity
+            allows resolving a concrete type even if it was not previously
+            registered.
+            </remarks>
+        </member>
+        <member name="T:API.UnityWebApiActivator">
+            <summary>
+            Provides the bootstrapping for integrating Unity with WebApi when it is hosted in ASP.NET.
+            </summary>
+        </member>
+        <member name="M:API.UnityWebApiActivator.Start">
+            <summary>
+            Integrates Unity when the application starts.
+            </summary>
+        </member>
+        <member name="M:API.UnityWebApiActivator.Shutdown">
+            <summary>
+            Disposes the Unity container when the application is shut down.
+            </summary>
+        </member>
+        <member name="M:API.Controllers.CategoriesController.Get(System.Int32)">
+            <summary>
+            Get selected category
+            </summary>
+            <param name="id">Category identifier</param>
+            <returns>Category details</returns>
+        </member>
+        <member name="M:API.Controllers.CategoriesController.GetAll">
+            <summary>
+            Get all categories
+            </summary>
+            <returns>List of categories</returns>
+        </member>
+        <member name="M:API.Controllers.CategoriesController.Post(API.Models.InputModels.Categories.CategoryInputModel)">
+            <summary>
+            Create new category
+            </summary>
+            <param name="model">Category details</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.CategoriesController.Put(System.Int32,API.Models.InputModels.Categories.CategoryInputModel)">
+            <summary>
+            Update existing category
+            </summary>
+            <param name="id">Category identifier</param>
+            <param name="model">Category details</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.CategoriesController.Delete(System.Int32)">
+            <summary>
+            Delete existing category
+            </summary>
+            <param name="id">Category identifier</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.DirectorsController.Get(System.Int32)">
+            <summary>
+            Get selected director
+            </summary>
+            <param name="id">Director identifier</param>
+            <returns>Director details</returns>
+        </member>
+        <member name="M:API.Controllers.DirectorsController.GetAll">
+            <summary>
+            Get all directors
+            </summary>
+            <returns>List of directors</returns>
+        </member>
+        <member name="M:API.Controllers.DirectorsController.Post(API.Models.InputModels.Directors.DirectorInputModel)">
+            <summary>
+            Create new director
+            </summary>
+            <param name="model">Director details</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.DirectorsController.Put(System.Int32,API.Models.InputModels.Directors.DirectorInputModel)">
+            <summary>
+            Update existing director
+            </summary>
+            <param name="id">Director identifier</param>
+            <param name="model">Director details</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.DirectorsController.Delete(System.Int32)">
+            <summary>
+            Delete existing director
+            </summary>
+            <param name="id">Director identifier</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.MoviesController.Get(System.Int32)">
+            <summary>
+            Get selected movie
+            </summary>
+            <param name="id">Movie identifier</param>
+            <returns>Movie details</returns>
+        </member>
+        <member name="M:API.Controllers.MoviesController.GetAll">
+            <summary>
+            Get all movies
+            </summary>
+            <returns>List of movies</returns>
+        </member>
+        <member name="M:API.Controllers.MoviesController.Post(API.Models.InputModels.Movies.MovieInputModel)">
+            <summary>
+            Create new movie
+            </summary>
+            <param name="model">Movie details</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.MoviesController.Put(System.Int32,API.Models.InputModels.Movies.MovieInputModel)">
+            <summary>
+            Update existing movie
+            </summary>
+            <param name="id">Movie identifier</param>
+            <param name="model">Movie details</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.MoviesController.Delete(System.Int32)">
+            <summary>
+            Delete existing movie
+            </summary>
+            <param name="id">Movie identifier</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.OrdersController.Get(System.Int32)">
+            <summary>
+            Get selected order
+            </summary>
+            <param name="id">Order identifier</param>
+            <returns>Order details</returns>
+        </member>
+        <member name="M:API.Controllers.OrdersController.GetAll">
+            <summary>
+            Get all orders
+            </summary>
+            <returns>List of orders</returns>
+        </member>
+        <member name="M:API.Controllers.OrdersController.Post(API.Models.InputModels.Orders.OrderInputModel)">
+            <summary>
+            Create new order
+            </summary>
+            <param name="model">Order details</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.OrdersController.Put(System.Int32,API.Models.InputModels.Orders.OrderInputModel)">
+            <summary>
+            Update existing order
+            </summary>
+            <param name="id">Order identifier</param>
+            <param name="model">Order details</param>
+            <returns>Status</returns>
+        </member>
+        <member name="M:API.Controllers.OrdersController.Delete(System.Int32)">
+            <summary>
+            Delete existing order
+            </summary>
+            <param name="id">Order identifier</param>
+            <returns>Status</returns>
+        </member>
+        <member name="P:API.Models.InputModels.Categories.CategoryInputModel.Name">
+            <summary>
+            Category name
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Directors.DirectorInputModel.Name">
+            <summary>
+            Director name
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Directors.DirectorInputModel.Surname">
+            <summary>
+            Director surname
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Movies.MovieInputModel.Title">
+            <summary>
+            Movie title
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Movies.MovieInputModel.Year">
+            <summary>
+            Movie year
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Movies.MovieInputModel.DirectorId">
+            <summary>
+            Director identifier
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Movies.MovieInputModel.Price">
+            <summary>
+            Movie price
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Movies.MovieInputModel.Image">
+            <summary>
+            Movie image path
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Movies.MovieInputModel.CategoryIds">
+            <summary>
+            Categories identifiers
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Orders.OrderInputModel.Name">
+            <summary>
+            Order name
+            </summary>
+        </member>
+        <member name="P:API.Models.InputModels.Orders.OrderInputModel.MovieIds">
+            <summary>
+            Order movies identifiers
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Categories.CategoryOutputModel.Id">
+            <summary>
+            Category identifier
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Categories.CategoryOutputModel.Name">
+            <summary>
+            Category name
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Categories.CategoryOutputModel.MoviesNames">
+            <summary>
+            Movies names
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Directors.DirectorOutputModel.Id">
+            <summary>
+            Director identifier
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Directors.DirectorOutputModel.Name">
+            <summary>
+            Director name
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Directors.DirectorOutputModel.Surname">
+            <summary>
+            Director surname
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Directors.DirectorOutputModel.MoviesNames">
+            <summary>
+            Movies names
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Movies.MovieOutputModel.Id">
+            <summary>
+            Movie identifier
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Movies.MovieOutputModel.Title">
+            <summary>
+            Movie title
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Movies.MovieOutputModel.DirectorName">
+            <summary>
+            Movie director
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Movies.MovieOutputModel.Year">
+            <summary>
+            Movie year
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Movies.MovieOutputModel.Price">
+            <summary>
+            Movie price
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Movies.MovieOutputModel.CategoriesNames">
+            <summary>
+            Movie categories
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Orders.OrderOutputModel.Id">
+            <summary>
+            Order identifier
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Orders.OrderOutputModel.Name">
+            <summary>
+            Order name
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Orders.OrderOutputModel.TotalPrice">
+            <summary>
+            Order total price
+            </summary>
+        </member>
+        <member name="P:API.Models.OutputModels.Orders.OrderOutputModel.MoviesNames">
+            <summary>
+            Order movies names
+            </summary>
+        </member>
+    </members>
+</doc>
